@@ -1,5 +1,10 @@
 {{page-title "Suft Advisor"}}
-<div class="page-wrapper">
-    <Layout::NavBar />
-    {{outlet}}
+<div aria-hidden="true" class="page-wrapper">
+    <div class="left-block" aria-hidden="true">
+        {{svg-jar "wave" aria-hidden="true" class="wave-icon"}}
+    </div>
+    <div class="content-wrapper">
+        <Layout::NavBar />
+        {{outlet}}
+    </div>
 </div>

@@ -5,5 +5,25 @@
 }
 
 :global(.page-wrapper) {
-    margin-left: 90px;
+    display: flex;
+    min-height: 100vh;
+
+    :global(.left-block) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 150px;
+        background-color: var(--color-accent-primary);
+
+        :global(.wave-icon) {
+            width: 30%;
+            fill: var(--color-black);
+        }
+    }
+
+    :global(.content-wrapper) {
+        margin-left: 90px;
+        flex-grow: 1;
+    }
 }
