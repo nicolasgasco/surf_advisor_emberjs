@@ -16,5 +16,14 @@
         "linkedin": "Ver mi LinkedIn"
       }
     }
+  },
+  "landing": {
+    "highlight-block": {
+      "title": "SurfAdvisor",
+      "subtitle": "Previsiones y webcams para surfistas"
+    },
+    "cover-picture": {
+      "copyright": "©Fotografia de Sam Wermut en Unsplash"
+    }
   }
 }

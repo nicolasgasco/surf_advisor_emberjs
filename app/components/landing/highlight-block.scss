@@ -1,0 +1,21 @@
+.highlight-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background: var(--color-black);
+
+    width: 600px;
+
+    padding: 50px;
+
+    >* {
+        color: var(--color-accent-primary);
+        font-family: "Roboto Mono";
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .highlight-block__icon {
+    }
+}
