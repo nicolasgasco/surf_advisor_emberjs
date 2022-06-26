@@ -6,24 +6,32 @@
 
 :global(.page-wrapper) {
     display: flex;
-    min-height: 100vh;
-
-    :global(.left-block) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        width: 150px;
-        background-color: var(--color-accent-primary);
-
-        :global(.wave-icon) {
-            width: 30%;
-            fill: var(--color-black);
-        }
-    }
+    height: max(100vh, 720px);
+    overflow-x: hidden;
+    overflow-y: auto;
 
     :global(.content-wrapper) {
         margin-left: 90px;
         flex-grow: 1;
+
+        overflow: hidden;
+
+        display: flex;
+        flex-direction: column;
     }
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small,
+span,
+input,
+select,
+textarea {
+    font-family: "Roboto Mono";
 }
