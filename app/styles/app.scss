@@ -3,3 +3,7 @@
 :global(*) {
     color: var(--color-black);
 }
+
+:global(.page-wrapper) {
+    margin-left: 90px;
+}
