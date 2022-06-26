@@ -1,6 +1,20 @@
 .highlight-block {
-    background: var(--color-accent-secondary);
-    display: block;
+    >ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > :not(:last-child) {
+            margin-right: 25px;
+        }
+
+        svg {
+            width: 40px;
+        }
+    }
+
+    padding: 40px 48px;
     margin-left: auto;
-    width: 200px;
+
+    background: var(--color-accent-secondary);
 }

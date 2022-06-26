@@ -10,6 +10,10 @@
       "links": {
         "home": "Inicio",
         "about": "Sobre mi"
+      },
+      "social": {
+        "github": "Ver mi GitHub",
+        "linkedin": "Ver mi LinkedIn"
       }
     }
   }

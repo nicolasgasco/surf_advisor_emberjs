@@ -10,6 +10,10 @@
       "links": {
         "home": "Home",
         "about": "About"
+      },
+      "social": {
+        "github": "See my GitHub",
+        "linkedin": "See my LinkedIn"
       }
     }
   }
