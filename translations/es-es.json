@@ -14,6 +14,19 @@
       "social": {
         "github": "Ver mi GitHub",
         "linkedin": "Ver mi LinkedIn"
+      },
+      "language-selector": {
+        "aria-label": "Cambiar idioma",
+        "langs": {
+          "es": {
+            "label": "ES",
+            "aria-label": "Espanol"
+          },
+          "en": {
+            "label": "EN",
+            "aria-label": "Ingles"
+          }
+        }
       }
     }
   },

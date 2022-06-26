@@ -1,0 +1,13 @@
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > :not(:last-child) {
+        margin-right: 25px;
+    }
+
+    svg {
+        width: 40px;
+    }
+}
