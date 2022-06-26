@@ -1,1 +1,5 @@
-@import "_normalize.scss"
+@import "_normalize.scss", "_resets.scss", "_colors.scss";
+
+:global(*) {
+    color: var(--color-black);
+}
