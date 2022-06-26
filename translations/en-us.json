@@ -4,5 +4,13 @@
   },
   "about": {
     "title": "This is the about page"
+  },
+  "layout": {
+    "nav-bar": {
+      "links": {
+        "home": "Home",
+        "about": "About"
+      }
+    }
   }
 }

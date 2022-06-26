@@ -1,0 +1,8 @@
+.navbar {
+    display: flex;
+    .navbar__inner {
+        padding: 46px 56px;
+        padding-left: 0;
+        flex-grow: 1;
+    }
+}

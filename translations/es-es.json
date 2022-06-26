@@ -1,8 +1,16 @@
 {
-    "index": {
-      "title": "Esta es la pagina index"
-    },
-    "about": {
-      "title": "Esta es la pagina about"
+  "index": {
+    "title": "Esta es la pagina index"
+  },
+  "about": {
+    "title": "Esta es la pagina about"
+  },
+  "layout": {
+    "nav-bar": {
+      "links": {
+        "home": "Inicio",
+        "about": "Sobre mi"
+      }
     }
   }
+}
