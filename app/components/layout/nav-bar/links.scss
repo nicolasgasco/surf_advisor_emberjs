@@ -6,4 +6,22 @@
     > :not(:last-child) {
         margin-right: 60px;
     }
+
+    font-family: "Roboto Mono";
+    font-size: 14px;
+    line-height: 24px;
+
+    >a {
+        position: relative;
+        &:global(.active) {
+            &:before {
+                content: '';
+                width: 100%;
+                height: 4px;
+                position: absolute;
+                bottom: -6px;
+                background-color: var(--color-black);
+            }
+        }
+    }
 }
