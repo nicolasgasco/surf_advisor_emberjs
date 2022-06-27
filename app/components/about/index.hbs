@@ -1,0 +1,31 @@
+<main local-class="about" data-test-about-page-main-wrapper>
+    <div>
+        <h1 class="contrasted-title" local-class="about__title" data-test-about-page-title>{{t "about.title"
+            htmlSafe=true}}</h1>
+        <div local-class="about__text">
+            <p data-test-about-page-intro>{{t "about.text.intro"}}</p>
+            <p data-test-about-page-goal>{{t "about.text.goal"}}</p>
+            <div>
+                <p data-test-about-page-list-intro>{{t "about.text.feature-list.intro"}}</p>
+                <ul>
+                    <li>
+                        <p data-test-about-page-list-locales>{{t "about.text.feature-list.locales"}}</p>
+                    </li>
+                    <li>
+                        <p data-test-about-page-list-styles>{{t "about.text.feature-list.styles"}}</p>
+                    </li>
+                    <li>
+                        <p data-test-about-page-list-ember-data>{{t "about.text.feature-list.ember-data"}}</p>
+                    </li>
+                    <li>
+                        <p data-test-about-page-list-svg-jar>{{t "about.text.feature-list.svg-jar"}}</p>
+                    </li>
+                </ul>
+            </div>
+            <p data-test-about-page-text-surfing>{{t "about.text.surfing"}}</p>
+            <p data-test-about-page-text-socials>{{t "about.text.socials"}}</p>
+        </div>
+    </div>
+    <img local-class="about__portrait" src="/asssets/img/portrait.jpeg" alt="" aria-hidden="true"
+        data-test-about-page-portrait />
+</main>

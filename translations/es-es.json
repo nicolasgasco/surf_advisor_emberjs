@@ -3,7 +3,20 @@
     "title": "<span>Busca</span><br/>sitios de surf"
   },
   "about": {
-    "title": "Esta es la pagina about"
+    "title": "Hola, soy <span>Nicolas</span>!",
+    "text": {
+      "intro": "Soy un desarrollador web que vive en Bilbao, España.",
+      "goal": "Creé esta sencilla pagina web para aprender a utilizar EmberJs 🐹",
+      "feature-list": {
+        "intro": "Estas son algunos de los temas que quise practicar en este proyecto:",
+        "locales": "gestión de más de un locale con ember-intl",
+        "styles": "estilos con SASS y modulos CSS",
+        "ember-data": "utilizo de Ember Data para comunicar con Firebase",
+        "svg-jar": "utilizo de ember-svg-jar para los SVGs"
+      },
+      "surfing": "También me gusta mucho hacer surf y siempre quite crear una web relacionada con el surf. 🏄‍♂️",
+      "socials": "Quizás habrás llegado aquí desde mi portafolio. Echa un vistazo a mi perfiles de GitHub y LinkedIn (botones en la barra de arriba)."
+    }
   },
   "layout": {
     "nav-bar": {
