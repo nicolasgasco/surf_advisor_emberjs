@@ -1,9 +1,18 @@
 .highlight-block {
-    padding: 40px 48px;
+    >select {
+        width: 100%;
+        height: 100%;
 
-    background: var(--color-accent-secondary);
+        padding: 40px 48px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+        background: var(--color-accent-secondary);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background: var(--color-accent-secondary-darker);
+        }
+    }
 }
