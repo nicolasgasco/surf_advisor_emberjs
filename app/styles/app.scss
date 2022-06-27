@@ -32,6 +32,28 @@ small,
 span,
 input,
 select,
-textarea {
+textarea,
+button {
     font-family: "Roboto Mono";
+}
+
+button,
+select {
+    cursor: pointer;
+}
+
+:global(.contrasted-title) {
+    text-transform: uppercase;
+    font-size: 48px;
+    line-height: 61px;
+    font-family: "Roboto Mono";
+    font-weight: 500;
+
+    margin-bottom: 60px;
+
+    color: var(--color-black-lighter);
+
+    >span {
+        color: var(--color-accent-tertiary);
+    }
 }

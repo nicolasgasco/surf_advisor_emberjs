@@ -1,0 +1,7 @@
+<div local-class="form__select-wrapper">
+    <select {{on "change" this.toggleIsSelectOpen}} aria-label={{@aria-label}}>
+        <option selected>{{@label}}</option>
+        {{yield to="options"}}
+    </select>
+    {{svg-jar "chevron-down" local-class="chevron-down"}}
+</div>
