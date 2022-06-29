@@ -1,2 +1,6 @@
-<option local-class="option" value={{@value}} selected={{if (eq @value @selectedValue) true false}} aria-selected={{if (eq
-    @value @selectedValue) true false}} aria-label={{@aria-label}}>{{@label}}</option>
+{{#if (eq @value @selectedValue)}}
+<option local-class="option" value={{@value}} selected aria-selected="true" aria-label={{@aria-label}}>{{@label}}
+</option>
+{{else}}
+<option local-class="option" value={{@value}} aria-selected="false" aria-label={{@aria-label}}>{{@label}}</option>
+{{/if}}
