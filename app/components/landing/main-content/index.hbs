@@ -1,4 +1,5 @@
-<main local-class="main-wrapper" ...attributes>
-    <h2 class="contrasted-title" local-class="main-wrapper__title">{{t "index.title" htmlSafe=true}}</h2>
-    <Landing::MainContent::SpotsSelection />
+<main local-class="main-wrapper" ...attributes data-test-landing-main-content-wrapper>
+    <h2 class="contrasted-title" local-class="main-wrapper__title" data-test-landing-main-content-title>{{t
+        "index.title" htmlSafe=true}}</h2>
+    <Landing::MainContent::SpotsSelection data-test-landing-main-content-spots />
 </main>
