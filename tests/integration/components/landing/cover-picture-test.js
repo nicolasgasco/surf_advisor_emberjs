@@ -1,26 +1,24 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'surf-advisor-emberjs/tests/helpers';
+import { setupIntl, t } from 'ember-intl/test-support';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
 module('Integration | Component | landing/cover-picture', function (hooks) {
   setupRenderingTest(hooks);
+  setupIntl(hooks);
 
   test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
     await render(hbs`<Landing::CoverPicture />`);
 
-    assert.dom(this.element).hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <Landing::CoverPicture>
-        template block text
-      </Landing::CoverPicture>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
+    assert.dom('[data-test-cover-picture-wrapper]').exists();
+    assert
+      .dom('[data-test-cover-picture-img]')
+      .hasAria('hidden', 'true')
+      .hasAttribute('src', '/asssets/img/cover.jpg')
+      .hasAttribute('alt', '');
+    assert
+      .dom('[data-test-cover-picture-small]')
+      .hasText(t('landing.cover-picture.copyright'));
   });
 });
