@@ -1,26 +1,24 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'surf-advisor-emberjs/tests/helpers';
+import { setupIntl, t } from 'ember-intl/test-support';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | layout/nav-bar/links', function (hooks) {
+module('Integration | Component | <Layout::NavBar::Links/>', function (hooks) {
   setupRenderingTest(hooks);
+  setupIntl(hooks);
 
   test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
     await render(hbs`<Layout::NavBar::Links />`);
 
-    assert.dom(this.element).hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <Layout::NavBar::Links>
-        template block text
-      </Layout::NavBar::Links>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
+    assert.dom('[data-test-nav-bar-links-wrapper]').exists();
+    assert
+      .dom('[data-test-nav-bar-links-link="index"]')
+      .hasText(t('layout.nav-bar.links.home'))
+      .hasAttribute('href', '/');
+    assert
+      .dom('[data-test-nav-bar-links-link="about"]')
+      .hasText(t('layout.nav-bar.links.about'))
+      .hasAttribute('href', '/about');
   });
 });
