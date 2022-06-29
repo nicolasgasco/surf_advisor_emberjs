@@ -3,24 +3,15 @@ import { setupRenderingTest } from 'surf-advisor-emberjs/tests/helpers';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | layout/nav-bar', function (hooks) {
+module('Integration | Component | <Layout::NavBar/>', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
     await render(hbs`<Layout::NavBar />`);
 
-    assert.dom(this.element).hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <Layout::NavBar>
-        template block text
-      </Layout::NavBar>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
+    assert.dom('[data-test-nav-bar-wrapper]').exists();
+    assert.dom('[data-test-nav-bar-links-wrapper]').exists();
+    assert.dom('[data-test-nav-bar-social-buttons-wrapper]').exists();
+    assert.dom('[data-test-nav-bar-lang-selector-wrapper]').exists();
   });
 });
