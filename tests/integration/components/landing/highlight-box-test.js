@@ -4,7 +4,7 @@ import { setupIntl, t } from 'ember-intl/test-support';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | landing/highlight-block', function (hooks) {
+module('Integration | Component | <Landing::HighlightBlock/>', function (hooks) {
   setupRenderingTest(hooks);
   setupIntl(hooks);
 
@@ -16,7 +16,7 @@ module('Integration | Component | landing/highlight-block', function (hooks) {
       .dom('[data-test-highlight-block-title]')
       .hasText(
         t('landing.highlight-block.title') +
-          t('landing.highlight-block.subtitle')
+        t('landing.highlight-block.subtitle')
       );
     assert
       .dom('[ data-test-highlight-block-img="svg"]')

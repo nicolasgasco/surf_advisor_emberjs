@@ -1,29 +1,20 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'surf-advisor-emberjs/tests/helpers';
+import { setupIntl, t } from 'ember-intl/test-support';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
 module(
-  'Integration | Component | layout/nav-bar/highlight-block',
+  'Integration | Component | <LanguageSelector>',
   function (hooks) {
     setupRenderingTest(hooks);
+    setupIntl(hooks);
 
     test('it renders', async function (assert) {
-      // Set any properties with this.set('myProperty', 'value');
-      // Handle any actions with this.set('myAction', function(val) { ... });
-
       await render(hbs`<Layout::NavBar::LanguageSelector />`);
 
-      assert.dom(this.element).hasText('');
-
-      // Template block usage:
-      await render(hbs`
-      <Layout::NavBar::LanguageSelector>
-        template block text
-      </Layout::NavBar::LanguageSelector>
-    `);
-
-      assert.dom(this.element).hasText('template block text');
+      assert.dom('[data-test-nav-bar-lang-selector-wrapper]').exists();
+      assert.dom('[data-test-nav-bar-lang-selector-select]').hasAria('label', t("layout.nav-bar.language-selector.aria-label"));
     });
   }
 );

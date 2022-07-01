@@ -3,24 +3,15 @@ import { setupRenderingTest } from 'surf-advisor-emberjs/tests/helpers';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | shared/form/select', function (hooks) {
+module('Integration | Component | <Shared::Form::Select/>', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+    await render(hbs`<Shared::Form::Select @aria-label="aria" @label="label"/>`);
 
-    await render(hbs`<Shared::Form::Select />`);
-
-    assert.dom(this.element).hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <Shared::Form::Select>
-        template block text
-      </Shared::Form::Select>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
+    assert.dom('[data-test-form-select-wrapper]').exists();
+    assert.dom('[data-test-form-select]').hasAria('label', 'aria');
+    assert.dom('[data-test-form-default-option]').hasText("label").hasAttribute('selected');
+    assert.dom('[data-test-form-select-chevron="svg"]').hasAria('hidden', 'true');
   });
 });
