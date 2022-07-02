@@ -4,7 +4,7 @@ import { setupIntl, t } from 'ember-intl/test-support';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | landing/cover-picture', function (hooks) {
+module('Integration | Component | <Landing::CoverPicture/>', function (hooks) {
   setupRenderingTest(hooks);
   setupIntl(hooks);
 

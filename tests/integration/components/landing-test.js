@@ -10,7 +10,7 @@ module('Integration | Component | <Landing/>', function (hooks) {
     await render(hbs`<Landing />`);
     assert.dom('[data-test-landing-page-wrapper]').exists();
     assert.dom('[data-test-landing-page-main-content]').exists();
-    // assert.dom('[data-test-landing-page-cover-picture]').exists();
-    assert.dom('[data-test-landing-page-highlight-block]').exists()
+    assert.dom('[data-test-landing-page-cover-picture]').exists();
+    assert.dom('[data-test-landing-page-highlight-block]').exists();
   });
 });

@@ -3,7 +3,7 @@ import { fillIn, select, visit } from '@ember/test-helpers';
 import { setupIntl, t } from 'ember-intl/test-support';
 import { setupApplicationTest } from 'surf-advisor-emberjs/tests/helpers';
 
-module('Acceptance | Change language', function (hooks) {
+module('Acceptance | Locales', function (hooks) {
   setupApplicationTest(hooks);
   setupIntl(hooks);
 
