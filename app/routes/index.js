@@ -3,6 +3,7 @@ import { service } from '@ember/service';
 
 export default class IndexRoute extends Route {
   @service intl;
+  @service store;
 
   beforeModel() {
     this.intl.setLocale(['es-us']);
@@ -22,5 +23,7 @@ export default class IndexRoute extends Route {
         this.intl.setLocale(['en-us']);
         document.documentElement.setAttribute('lang', 'en');
     }
+
+    return this.store.findAll('spot');
   }
 }
