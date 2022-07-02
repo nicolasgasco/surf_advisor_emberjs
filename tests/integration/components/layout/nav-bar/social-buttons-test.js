@@ -17,7 +17,10 @@ module(
       assert
         .dom('[data-test-nav-bar-social-buttons-link="github"]')
         .hasAria('label', t('layout.nav-bar.social.github'))
-        .hasAttribute('href', 'https://github.com/nicolasgasco/surf_advisor_emberjs')
+        .hasAttribute(
+          'href',
+          'https://github.com/nicolasgasco/surf_advisor_emberjs'
+        )
         .hasAttribute('target', '_blank')
         .hasAttribute('rel', 'noopener noreferrer')
         .hasAttribute('tabindex', '0');
