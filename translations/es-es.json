@@ -51,5 +51,8 @@
     "cover-picture": {
       "copyright": "©Fotografia de Sam Wermut en Unsplash"
     }
+  },
+  "countries": {
+    "es": "España"
   }
 }

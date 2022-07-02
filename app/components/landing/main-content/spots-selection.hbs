@@ -1,24 +1,30 @@
 <div data-test-spots-selection-wrapper ...attributes>
-    <Shared::Form @submit-cta="Search" @submitHandler={{this.handleSpotSelectionSubmit}}>
-        <:controls>
-            <Shared::Form::Select @aria-label="Select country" @label="Country">
-                <:options>
-                    <option>Ciao</option>
-                    <option>Miao</option>
-                </:options>
-            </Shared::Form::Select>
-            <Shared::Form::Select @aria-label="Select region" @label="Region">
-                <:options>
-                    <option>Ciao</option>
-                    <option>Miao</option>
-                </:options>
-            </Shared::Form::Select>
-            <Shared::Form::Select @aria-label="Select spot" @label="Spot">
-                <:options>
-                    <option>Ciao</option>
-                    <option>Miao</option>
-                </:options>
-            </Shared::Form::Select>
-        </:controls>
-    </Shared::Form>
+  <Shared::Form
+    @submit-cta='Search'
+    @submitHandler={{this.handleSpotSelectionSubmit}}
+  >
+    <:controls>
+      <Shared::Form::Select @aria-label='Select country' @label='Country'>
+        <:options>
+          {{#each @spots as |spot|}}
+            <option>{{t (concat 'countries.' spot.country)}}</option>
+          {{/each}}
+        </:options>
+      </Shared::Form::Select>
+      <Shared::Form::Select @aria-label='Select region' @label='Region'>
+        <:options>
+          {{#each @spots as |spot|}}
+            <option>{{title-case spot.region}}</option>
+          {{/each}}
+        </:options>
+      </Shared::Form::Select>
+      <Shared::Form::Select @aria-label='Select spot' @label='Spot'>
+        <:options>
+          {{#each @spots as |spot|}}
+            <option>{{spot.name}}</option>
+          {{/each}}
+        </:options>
+      </Shared::Form::Select>
+    </:controls>
+  </Shared::Form>
 </div>
