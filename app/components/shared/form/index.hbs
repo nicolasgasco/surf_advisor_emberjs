@@ -1,4 +1,4 @@
-<form local-class="form" {{on "submit" @submitHandler}}>
-    {{yield to="controls"}}
-    <Shared::Form::Submit @submit-cta={{@submit-cta}} />
+<form local-class='form' {{on 'submit' @submitHandler}} ...attributes>
+  {{yield to='controls'}}
+  <Shared::Form::Submit @submit-cta={{@submit-cta}} />
 </form>
