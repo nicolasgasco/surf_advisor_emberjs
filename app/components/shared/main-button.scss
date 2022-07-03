@@ -1,0 +1,22 @@
+.main-button {
+  color: var(--color-white);
+  background: var(--color-black);
+  border: none;
+
+  padding: 20px 45px;
+
+  font-size: 14px;
+  letter-spacing: 1px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .icon {
+    fill: var(--color-white);
+    width: 10px;
+    height: auto;
+    object-fit: contain;
+    margin-right: 15px;
+  }
+}

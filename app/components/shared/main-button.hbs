@@ -1,0 +1,11 @@
+<button local-class='main-button' type={{@type}} ...attributes>
+  {{#if @icon}}
+    {{svg-jar
+      @icon
+      local-class='icon'
+      aria-hidden='true'
+      data-test-main-button-svg='svg'
+    }}
+  {{/if}}
+  {{yield}}
+</button>
