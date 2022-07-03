@@ -1,0 +1,10 @@
+.main-wrapper__aside {
+  width: 400px;
+  flex-shrink: 0;
+
+  padding-top: 100px;
+  padding-right: 90px;
+  .main-wrapper__pretitle {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,42 @@
+.surf-fc-widget {
+  max-width: auto;
+  transition: all 1s;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #666;
+}
+div.surf-fc-widget a {
+  color: var(--color-accent-highlight);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: normal;
+}
+.surf-fc-widget .ui-resizable-handle {
+  background: none;
+}
+.surf-fc-widget .widget-container {
+  background-color: var(--color-white);
+  border: solid 3px var(--color-black);
+  overflow: hidden;
+}
+.surf-fc-widget .external-cont {
+  position: relative;
+}
+.surf-fc-widget .surf-fc-i {
+  overflow: hidden;
+  border: none;
+  height: 347px;
+  width: 100%;
+}
+
+.surf-fc-widget .external-cont .footer {
+  padding: 10px;
+  min-height: 30px;
+  box-sizing: content-box;
+}
+
+.surf-fc-widget .about {
+  line-height: 18px;
+  text-align: left;
+  color: var(--color-black);
+}

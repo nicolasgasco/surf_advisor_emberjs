@@ -1,0 +1,14 @@
+<div local-class='main-wrapper__aside'>
+  <p local-class='main-wrapper__pretitle'>{{title-case @spot.region}},
+    {{t (concat 'countries.' @spot.country)}}</p>
+  <h2
+    class='contrasted-title'
+    local-class='main-wrapper__title'
+    data-test-landing-main-content-title
+  ><span>{{@spot.name}}</span><br />{{t 'spot-info.title' htmlSafe=true}}</h2>
+  <Shared::MainButton
+    @type='button'
+    @icon='left-arrow'
+    {{on 'click' this.onClickBackButton}}
+  >Back</Shared::MainButton>
+</div>

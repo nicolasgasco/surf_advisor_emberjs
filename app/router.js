@@ -10,4 +10,5 @@ Router.map(function () {
   this.route('index', { path: '/:lang' });
   this.route('index', { path: '/' });
   this.route('about');
+  this.route('spot', { path: '/spot/:spot_id' });
 });

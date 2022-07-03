@@ -1,0 +1,10 @@
+.main-wrapper__main {
+  background: var(--color-accent-teriary);
+  flex-grow: 1;
+
+  padding: 50px;
+  padding-top: 100px;
+
+  display: flex;
+  flex-direction: column;
+}
