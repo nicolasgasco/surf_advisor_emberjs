@@ -4,24 +4,48 @@
     @submitHandler={{this.handleSpotSelectionSubmit}}
   >
     <:controls>
-      <Shared::Form::Select @aria-label='Select country' @label='Country'>
+      {{log this.spots}}
+      <Shared::Form::Select
+        @aria-label='Select country'
+        @label='Country'
+        @onChangeHandler={{this.selectCountryHandler}}
+      >
         <:options>
-          {{#each @spots as |spot|}}
-            <option>{{t (concat 'countries.' spot.country)}}</option>
+          {{#each this.countries as |country|}}
+            <Shared::Form::Option
+              @value={{country}}
+              @selectedValue={{this.selectedCountry}}
+            >{{t (concat 'countries.' country)}}</Shared::Form::Option>
           {{/each}}
         </:options>
       </Shared::Form::Select>
-      <Shared::Form::Select @aria-label='Select region' @label='Region'>
+      <Shared::Form::Select
+        @aria-label='Select region'
+        @label='Region'
+        @value={{this.selectedRegion}}
+        @onChangeHandler={{this.selectRegionHandler}}
+      >
         <:options>
-          {{#each @spots as |spot|}}
-            <option>{{title-case spot.region}}</option>
+          {{#each this.regions as |region|}}
+            <Shared::Form::Option
+              @value={{region}}
+              @selectedValue={{this.selectedRegion}}
+            >{{title-case region}}</Shared::Form::Option>
           {{/each}}
         </:options>
       </Shared::Form::Select>
-      <Shared::Form::Select @aria-label='Select spot' @label='Spot'>
+      <Shared::Form::Select
+        @aria-label='Select spot'
+        @label='Spot'
+        @onChangeHandler={{this.selectSpotNameHandler}}
+      >
         <:options>
-          {{#each @spots as |spot|}}
-            <option>{{spot.name}}</option>
+          {{#each this.spotNames as |spot|}}
+            {{log spot}}
+            <Shared::Form::Option
+              @value={{spot.id}}
+              @selectedValue={{this.selectedSpotId}}
+            >{{spot.name}}</Shared::Form::Option>
           {{/each}}
         </:options>
       </Shared::Form::Select>

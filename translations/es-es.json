@@ -52,7 +52,11 @@
       "copyright": "©Fotografia de Sam Wermut en Unsplash"
     }
   },
+  "spot-info": {
+    "title": "Información sobre el spot"
+  },
   "countries": {
-    "es": "España"
+    "es": "España",
+    "pt": "Portugal"
   }
 }
