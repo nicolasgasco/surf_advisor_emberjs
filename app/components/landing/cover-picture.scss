@@ -1,20 +1,21 @@
 .main-wrapper__cover {
-    flex-grow: 1;
+  flex-grow: 1;
 
-    .cover {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: left bottom;
-    }
+  .cover {
+    background-color: var(--color-accent-teriary);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left bottom;
+  }
 
-    .copyright {
-        position: absolute;
-        bottom: 5px;
-        right: 5px;
+  .copyright {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
 
-        font-size: 14px;
+    font-size: 14px;
 
-        color: var(--color-white);
-    }
+    color: var(--color-white);
+  }
 }

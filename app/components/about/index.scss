@@ -1,57 +1,58 @@
 .about {
-    padding: 100px 0;
+  padding: 100px 0;
 
-    display: flex;
+  display: flex;
 
-    .about__title {
-        text-transform: uppercase;
+  .about__title {
+    text-transform: uppercase;
 
-        color: var(--color-black-lighter);
+    color: var(--color-black-lighter);
 
-        >span {
-            color: var(--color-accent-highlight);
-        }
+    > span {
+      color: var(--color-accent-highlight);
+    }
+  }
+
+  .about__text {
+    max-width: 600px;
+
+    font-size: 18px;
+    line-height: 36px;
+
+    > * {
+      margin-bottom: 30px;
     }
 
-    .about__text {
-        max-width: 600px;
+    ul {
+      li {
+        position: relative;
 
-        font-size: 18px;
-        line-height: 36px;
+        padding-left: 35px;
 
-        >* {
-            margin-bottom: 30px;
+        &:before {
+          content: '-';
+          position: absolute;
+          left: 15px;
+          top: 50%;
+          transform: translateY(-50%);
         }
-
-        ul {
-            li {
-                position: relative;
-
-                padding-left: 35px;
-
-                &:before {
-                    content: "-";
-                    position: absolute;
-                    left: 15px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-            }
-        }
+      }
     }
+  }
 
-    .about__portrait {
-        width: 350px;
-        height: 350px;
-        flex-shrink: 0;
-        object-fit: contain;
+  .about__portrait {
+    width: 350px;
+    height: 350px;
+    flex-shrink: 0;
+    object-fit: contain;
 
-        // border-radius: 100%;
+    background-color: var(--color-accent-primary);
 
-        margin-left: 200px;
-        margin-top: 20px;
+    margin-left: 200px;
+    margin-top: 20px;
 
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-        border: 10px solid var(--color-accent-primary);
-    }
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border: 10px solid var(--color-accent-primary);
+  }
 }
