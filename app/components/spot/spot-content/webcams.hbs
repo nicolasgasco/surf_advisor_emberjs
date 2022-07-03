@@ -1,5 +1,10 @@
 <div local-class='spot-webcams-wrapper'>
-  {{#each @webcams as |webcam|}}
-    <img src={{webcam}} aria-hidden='true' />
-  {{/each}}
+  {{#if @webcams}}
+    {{#each @webcams as |webcam|}}
+      <img src={{webcam}} aria-hidden='true' />
+    {{/each}}
+  {{else}}
+    <p>No webcams to show :(</p>
+  {{/if}}
+
 </div>
