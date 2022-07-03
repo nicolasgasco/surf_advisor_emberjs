@@ -1,11 +1,22 @@
-<div local-class="highlight-block" data-test-nav-bar-lang-selector-wrapper>
-    <select aria-label={{t "layout.nav-bar.language-selector.aria-label" }} {{on "change" this.setSelectedLang}}
-        data-test-nav-bar-lang-selector-select>
-        <Shared::Form::Option @value="en" @selectedValue={{this.selectedLang}}
-            @label={{t "layout.nav-bar.language-selector.langs.en.label" }}
-            @aria-label={{t "layout.nav-bar.language-selector.langs.en.aria-label" }} />
-        <Shared::Form::Option @value="es" @selectedValue={{this.selectedLang}}
-            @label={{t "layout.nav-bar.language-selector.langs.es.label" }}
-            @aria-label={{t "layout.nav-bar.language-selector.langs.es.aria-label" }} />
-    </select>
+<div local-class='highlight-block' data-test-nav-bar-lang-selector-wrapper>
+  <select
+    aria-label={{t 'layout.nav-bar.language-selector.aria-label'}}
+    {{on 'change' this.setSelectedLang}}
+    data-test-nav-bar-lang-selector-select
+  >
+    <Shared::Form::Option
+      @value='en'
+      @selectedValue={{this.selectedLang}}
+      @aria-label={{t 'layout.nav-bar.language-selector.langs.en.aria-label'}}
+    >{{t
+        'layout.nav-bar.language-selector.langs.en.label'
+      }}</Shared::Form::Option>
+    <Shared::Form::Option
+      @value='es'
+      @selectedValue={{this.selectedLang}}
+      @aria-label={{t 'layout.nav-bar.language-selector.langs.es.aria-label'}}
+    >{{t
+        'layout.nav-bar.language-selector.langs.es.label'
+      }}</Shared::Form::Option>
+  </select>
 </div>

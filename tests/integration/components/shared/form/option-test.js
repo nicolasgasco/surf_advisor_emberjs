@@ -8,7 +8,7 @@ module('Integration | Component | <Shared::Form::Option/>', function (hooks) {
 
   test('it renders as selected when the value is also the selected value', async function (assert) {
     await render(
-      hbs`<Shared::Form::Option @value="value" @selectedValue="value" @aria-label="aria" @label="label"/>`
+      hbs`<Shared::Form::Option @value="value" @selectedValue="value" @aria-label="aria">label</Shared::Form::Option>`
     );
 
     assert
@@ -21,7 +21,7 @@ module('Integration | Component | <Shared::Form::Option/>', function (hooks) {
 
   test('it renders as unselected when the value is not the selected value', async function (assert) {
     await render(
-      hbs`<Shared::Form::Option @value="value" @selectedValue="other" @aria-label="aria" @label="label"/>`
+      hbs`<Shared::Form::Option @value="value" @selectedValue="other" @aria-label="aria">label</Shared::Form::Option>`
     );
 
     assert
