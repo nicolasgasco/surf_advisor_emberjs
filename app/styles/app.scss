@@ -1,24 +1,24 @@
-@import "_normalize.scss", "_resets.scss", "_colors.scss";
+@import '_normalize.scss', '_resets.scss', '_colors.scss';
 
 :global(*) {
-    color: var(--color-black);
+  color: var(--color-black);
 }
 
 :global(.page-wrapper) {
+  display: flex;
+  height: max(100vh, 720px);
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  :global(.content-wrapper) {
+    margin-left: 90px;
+    flex-grow: 1;
+
+    overflow: hidden;
+
     display: flex;
-    height: max(100vh, 720px);
-    overflow-x: hidden;
-    overflow-y: auto;
-
-    :global(.content-wrapper) {
-        margin-left: 90px;
-        flex-grow: 1;
-
-        overflow: hidden;
-
-        display: flex;
-        flex-direction: column;
-    }
+    flex-direction: column;
+  }
 }
 
 p,
@@ -34,26 +34,26 @@ input,
 select,
 textarea,
 button {
-    font-family: "Roboto Mono";
+  font-family: 'Roboto Mono';
 }
 
 button,
 select {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 :global(.contrasted-title) {
-    text-transform: uppercase;
-    font-size: 48px;
-    line-height: 61px;
-    font-family: "Roboto Mono";
-    font-weight: 500;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 61px;
+  font-family: 'Roboto Mono';
+  font-weight: 500;
 
-    margin-bottom: 60px;
+  margin-bottom: 60px;
 
-    color: var(--color-black-lighter);
+  color: var(--color-black-lighter);
 
-    >span {
-        color: var(--color-accent-tertiary);
-    }
+  > span {
+    color: var(--color-accent-highlight);
+  }
 }
