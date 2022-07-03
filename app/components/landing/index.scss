@@ -1,24 +1,13 @@
-.main-wrapper {
-    display: flex;
-    height: 100%;
-    overflow: hidden;
+.main-wrapper__highlight {
+  position: absolute;
+  bottom: 0;
+  left: 250px;
+}
+.main-wrapper__content {
+  width: 400px;
+  flex-shrink: 0;
+}
 
-    position: relative;
-
-    flex-grow: 1;
-
-    .main-wrapper__content {
-        width: 400px;
-        flex-shrink: 0;
-    }
-
-    .main-wrapper__cover {
-        flex-grow: 1;
-    }
-
-    .main-wrapper__highlight {
-        position: absolute;
-        bottom: 0;
-        left: 250px;
-    }
+.main-wrapper__cover {
+  flex-grow: 1;
 }
