@@ -5,4 +5,5 @@ export default class SpotModel extends Model {
   @attr('string') region;
   @attr('string') name;
   @attr webcams;
+  @attr('string') widget;
 }
