@@ -55,6 +55,9 @@
   "spot-info": {
     "title": "Información sobre el spot"
   },
+  "forecast-fallback": {
+    "copyright": "©Fotografia de Fix Rod en Unsplash"
+  },
   "countries": {
     "es": "España",
     "pt": "Portugal"

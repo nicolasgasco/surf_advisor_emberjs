@@ -1,0 +1,15 @@
+{{#if @webcams}}
+  <div local-class='wrapper'>
+    <h3 local-class='title'>Webcams</h3>
+    <div local-class='spot-webcams-wrapper'>
+      {{#each @webcams as |webcam|}}
+        <Spot::SpotContent::Webcams::Preview @webcamUrl={{webcam}} />
+      {{/each}}
+    </div>
+  </div>
+{{else}}
+  <div local-class='spot-webcams-fallback wrapper'>
+    <h3 local-class='title'>Webcams</h3>
+    <p>No webcams to show :(</p>
+  </div>
+{{/if}}

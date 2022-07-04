@@ -1,3 +1,4 @@
+<h3 local-class='title'>Forecast</h3>
 {{#if @widgetURL}}
   <div local-class='wf-width-cont surf-fc-widget'>
     <div local-class='widget-container'>
@@ -5,7 +6,7 @@
         <iframe
           local-class='surf-fc-i'
           allowtransparency='true'
-          src={{@widgetURL}}
+          src={{concat @widgetURL '/forecasts/widget/a'}}
           scrolling='no'
           frameborder='0'
           marginwidth='0'
@@ -13,19 +14,35 @@
         ></iframe>
         <div local-class='footer'>
           <div local-class='about' id='cmt'>More
-            <a href='//www.surf-forecast.com/breaks/La-Arena-1'>Detailed Surf
-              Conditions &amp; Webcams for&nbsp;La Arena</a>
+            <a
+              href={{@widgetURL}}
+              target='_blank'
+              rel='noopener noreferrer'
+            >Detailed Surf Conditions &amp; Webcams for&nbsp;{{@spotName}}</a>
             <nobr>at&nbsp;
-              <a href='//www.surf-forecast.com/'>surf-forecast.com</a>
+              <a
+                href='//www.surf-forecast.com/'
+                target='_blank'
+                rel='noopener noreferrer'
+              >surf-forecast.com</a>
             </nobr>.
           </div>
         </div>
       </div>
     </div>
   </div>
-  {{log @widgetURL}}
 {{else}}
-  <div>
-    <p>No forecast to show :(</p>
+  <div local-class='forecast-fallback' class='black-border'>
+    <img
+      local-class='forecast-fallback__bg'
+      src='/asssets/img/no-forecast.jpg'
+      alt=''
+    />
+    <h3 local-class='forecast-fallback__title'>No forecast to show :(</h3>
+    <small
+      local-class='forecast-fallback__copyright'
+      data-test-cover-picture-small
+    >{{t 'forecast-fallback.copyright'}}</small>
+
   </div>
 {{/if}}

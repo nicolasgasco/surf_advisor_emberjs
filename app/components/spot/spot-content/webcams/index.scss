@@ -1,0 +1,20 @@
+.wrapper {
+  margin-top: 50px;
+  > .spot-webcams-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    grid-template-rows: min-content;
+    grid-gap: 20px;
+    justify-content: center;
+  }
+  &.spot-webcams-fallback {
+    text-align: center;
+  }
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: bold;
+  font-size: 32px;
+}

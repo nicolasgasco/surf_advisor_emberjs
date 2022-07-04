@@ -1,0 +1,43 @@
+.thumbnail {
+  width: auto;
+  max-width: 100%;
+  max-height: min(100%, 180px);
+
+  object-fit: contain;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  &:not(:last-of-type) {
+    margin-right: 25px;
+  }
+  cursor: zoom-in;
+}
+
+.preview {
+  cursor: zoom-out;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background: rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  > img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+
+    margin: 0;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+}

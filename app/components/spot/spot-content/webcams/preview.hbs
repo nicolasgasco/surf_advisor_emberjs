@@ -1,0 +1,11 @@
+<img
+  local-class='thumbnail'
+  src={{@webcamUrl}}
+  aria-hidden='true'
+  {{on 'click' this.togglePreview}}
+/>
+{{#if this.showPreview}}
+  <div local-class='preview' {{on 'click' this.togglePreview}}>
+    <img src={{@webcamUrl}} aria-hidden='true' />
+  </div>
+{{/if}}

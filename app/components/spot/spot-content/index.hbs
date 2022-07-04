@@ -1,4 +1,8 @@
 <main local-class='main-wrapper__main'>
-  <Spot::SpotContent::Forecast @widgetURL={{@spot.widget}} />
+  <Spot::SpotContent::Forecast
+    @widgetURL={{@spot.widget}}
+    @spotName={{@spot.name}}
+  />
+  {{log @spot}}
   <Spot::SpotContent::Webcams @webcams={{@spot.webcams}} />
 </main>
