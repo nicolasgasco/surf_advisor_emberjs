@@ -54,7 +54,7 @@ export default class SpotsSelectionComponent extends Component {
   @action
   handleSpotSelectionSubmit(e) {
     e.preventDefault();
-    this.router.transitionTo(`/spot/${this.selectedSpotId}`);
+    this.router.transitionTo('spot', this.selectedSpotId);
   }
 
   @action
