@@ -53,10 +53,21 @@
     }
   },
   "spot-info": {
-    "title": "Información sobre el spot"
-  },
-  "forecast-fallback": {
-    "copyright": "©Fotografia de Fix Rod en Unsplash"
+    "title": "Información sobre el spot",
+    "forecast": {
+      "title": "Parte",
+      "link": "Parte de olas y webcams para para {spotName} <span>en</span> surf-forecast.com</span>",
+      "fallback": {
+        "title": "No hay previsiones para enseñar :(",
+        "picture": "©Fotografia de Fix Rod en Unsplash"
+      }
+    },
+    "webcams": {
+      "title": "Webcams",
+      "fallback": {
+        "title": "No hay webcams para enseñar :("
+      }
+    }
   },
   "countries": {
     "es": "España",

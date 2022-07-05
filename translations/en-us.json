@@ -53,10 +53,21 @@
     }
   },
   "spot-info": {
-    "title": "Spot info"
-  },
-  "forecast-fallback": {
-    "copyright": "©Photo by Fix Rod on Unsplash"
+    "title": "Spot info",
+    "forecast": {
+      "title": "Forecast",
+      "link": "Detailed Surf Conditions & Webcams for {spotName} <span>at</span> surf-forecast.com.",
+      "fallback": {
+        "title": "No forecast to show :(",
+        "picture": "©Photo by Fix Rod on Unsplash"
+      }
+    },
+    "webcams": {
+      "title": "Webcams",
+      "fallback": {
+        "title": "No webcams to show :("
+      }
+    }
   },
   "countries": {
     "es": "Spain",

@@ -1,4 +1,4 @@
-<h3 local-class='title'>Forecast</h3>
+<h3 local-class='title'>{{t 'spot-info.forecast.title'}}</h3>
 {{#if @widgetURL}}
   <div local-class='wf-width-cont surf-fc-widget'>
     <div local-class='widget-container'>
@@ -13,19 +13,12 @@
           marginheight='0'
         ></iframe>
         <div local-class='footer'>
-          <div local-class='about' id='cmt'>More
-            <a
-              href={{@widgetURL}}
-              target='_blank'
-              rel='noopener noreferrer'
-            >Detailed Surf Conditions &amp; Webcams for&nbsp;{{@spotName}}</a>
-            <nobr>at&nbsp;
-              <a
-                href='//www.surf-forecast.com/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >surf-forecast.com</a>
-            </nobr>.
+          <div local-class='about' id='cmt'>
+            <a href={{@widgetURL}} target='_blank' rel='noopener noreferrer'>{{t
+                'spot-info.forecast.link'
+                spotName=@spotName
+                htmlSafe=true
+              }}</a>
           </div>
         </div>
       </div>
@@ -38,11 +31,12 @@
       src='/asssets/img/no-forecast.jpg'
       alt=''
     />
-    <h3 local-class='forecast-fallback__title'>No forecast to show :(</h3>
+    <h3 local-class='forecast-fallback__title'>{{t
+        'spot-info.forecast.fallback.title'
+      }}</h3>
     <small
       local-class='forecast-fallback__copyright'
       data-test-cover-picture-small
-    >{{t 'forecast-fallback.copyright'}}</small>
-
+    >{{t 'spot-info.forecast.fallback.picture'}}</small>
   </div>
 {{/if}}
