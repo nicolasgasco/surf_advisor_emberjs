@@ -4,6 +4,10 @@
 
   padding-top: 100px;
   padding-right: 90px;
+  @media (max-width: 500px) {
+    padding-top: 50px;
+    padding-right: 15px;
+  }
   .main-wrapper__pretitle {
     margin-bottom: 20px;
   }

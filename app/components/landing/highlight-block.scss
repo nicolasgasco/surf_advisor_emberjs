@@ -1,21 +1,24 @@
 .highlight-block {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    background: var(--color-black);
+  @media (max-width: 1250px) {
+    display: none;
+  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    width: 600px;
+  background: var(--color-black);
 
-    padding: 50px;
+  width: 600px;
 
-    >* {
-        color: var(--color-accent-primary);
-        font-family: "Roboto Mono";
-        font-size: 20px;
-        line-height: 26px;
-    }
+  padding: 50px;
 
-    .highlight-block__icon {
-    }
+  > * {
+    color: var(--color-accent-primary);
+    font-family: 'Roboto Mono';
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .highlight-block__icon {
+  }
 }

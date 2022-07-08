@@ -4,6 +4,9 @@
   left: 250px;
 }
 .main-wrapper__content {
+  @media (max-width: 800px) {
+    width: 100%;
+  }
   width: 400px;
   flex-shrink: 0;
 }

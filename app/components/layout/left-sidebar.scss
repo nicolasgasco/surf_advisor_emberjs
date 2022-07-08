@@ -1,14 +1,18 @@
 .left-sidebar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    flex-shrink: 0;
+  flex-shrink: 0;
+  flex-basis: 0;
+  @media (min-width: 1500px) {
     flex-basis: 150px;
-    background-color: var(--color-accent-primary);
+  }
+  transition: all 0.5s linear;
+  background-color: var(--color-accent-primary);
 
-    :global(.wave-icon) {
-        width: 30%;
-        fill: var(--color-black);
-    }
+  :global(.wave-icon) {
+    width: 30%;
+    fill: var(--color-black);
+  }
 }
